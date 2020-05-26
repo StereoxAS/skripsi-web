@@ -8,6 +8,8 @@
 @endsection
 
 @section('section_content')
+<div class="container">
     <p>Developed by Krishna Aji</p>
     <p>Powered by Laravel & Bootstrap</p>
+</div>
 @endsection

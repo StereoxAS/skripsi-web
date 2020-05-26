@@ -1,0 +1,46 @@
+Todo List
+
+- Laravel			done
+- Composer			done
+- PHP				done
+- Running laravel project	done
+
+- Textract			done
+# List below need testing
+- Dependecies
+	- python-dev
+	- libxml2-dev
+	- libxsltl-dev
+	- antiword
+	- unrtf
+	- poppler-utils
+	- pstotext
+	- tesseract-ocr
+- Support textract
+	- csv/txt	python builtin		done
+	- doc		antiword		done
+	- docx		python-docx2txt		done
+	- jpg / png	tesseract-ocr		nope
+	- pdf		pdftotext		done
+
+Function Progress :
+
+- Extracting raw data				done
+- Classifying data/text				nope
+- Reformatting data				nope
+
+- Use NTLK (Natural Language ToolKit)		
+	Bird, Steven, Edward Loper and Ewan Klein (2009), Natural Language Processing with Python. O’Reilly Media Inc.
+
+Website Progress : 
+
+- Upload function				done
+- Automatic parsing				nope
+- Editing after parsing				nope
+- Automatic publish				nope
+
+Advanced : 
+
+- Drag n Drop function				done
+	use DropZone.js
+- Library with Search function			nope

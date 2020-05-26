@@ -7,7 +7,8 @@
     <meta name="description" content="">
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Jekyll v4.0.1">
-    <title>Laravel · @yield('title')</title>
+    
+    <title>{{config('app.name')}} · @yield('title')</title>
 
     <link rel="canonical" href="https://getbootstrap.com/docs/4.5/examples/dashboard/">
 
@@ -50,7 +51,7 @@
   
   <ul class="navbar-nav px-3">
     <li class="nav-item text-nowrap">
-      <a class="nav-link" href="#">Sign out</a>
+      <a class="nav-link" href="#">Login</a>
     </li>
   </ul>
 </nav>
@@ -111,10 +112,9 @@
             <button type="button" class="btn btn-sm btn-outline-secondary">Share</button>
             <button type="button" class="btn btn-sm btn-outline-secondary">Export</button>
           </div>
-          <button type="button" class="btn btn-sm btn-outline-secondary dropdown-toggle">
-            <span data-feather="calendar"></span>
-            This week
-          </button>
+          @section('section_header_menu')
+              
+          @show
         </div>
       </div>
 
@@ -122,39 +122,40 @@
           
       @show
 
-      <!-- Example Table 
-      <h2>Table Example</h2>
-      <div class="table-responsive">
-        <table class="table table-striped table-sm">
-          <thead>
-            <tr>
-              <th>#</th>
-              <th>Header</th>
-              <th>Header</th>
-              <th>Header</th>
-              <th>Header</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>1,001</td>
-              <td>Lorem</td>
-              <td>ipsum</td>
-              <td>dolor</td>
-              <td>sit</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-      -->
 
     </main>
     <!-- End Content -->
+    <!-- Javascript -->
+    <script type="text/javascript">
+    // Get the container element
+    var btnContainer = document.getElementById("sidebarMenu");
+
+    // Get all buttons with class="btn" inside the container
+    var btns = btnContainer.getElementsByClassName("nav-link");
+
+    // Loop through the buttons and add the active class to the current/clicked button
+    for (var i = 0; i < btns.length; i++) {
+      btns[i].addEventListener("click", function() {
+        var current = document.getElementsByClassName("active");
+
+        // If there's no active class
+        if (current.length > 0) {
+          current[0].className = current[0].className.replace(" active", "");
+        }
+
+        // Add the active class to the current/clicked button
+        this.className += " active";
+      });
+    }
+    </script>
+
   </div>
 </div>
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-      <script>window.jQuery || document.write('<script src="/docs/4.5/assets/js/vendor/jquery.slim.min.js"><\/script>')</script><script src="/docs/4.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-1CmrxMRARb6aLqgBO7yyAxTOQE2AKb9GfXnEo760AUcUmFx3ibVJJAzGytlQcNXd" crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/feather-icons/4.9.0/feather.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.min.js"></script>
-        <script src="https://getbootstrap.com/docs/4.5/examples/dashboard/dashboard.js"></script></body>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+<script>window.jQuery || document.write('<script src="/docs/4.5/assets/js/vendor/jquery.slim.min.js"><\/script>')</script>
+<!-- <script src="/docs/4.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-1CmrxMRARb6aLqgBO7yyAxTOQE2AKb9GfXnEo760AUcUmFx3ibVJJAzGytlQcNXd" crossorigin="anonymous"></script> -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/feather-icons/4.9.0/feather.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.min.js"></script>
+<script src="https://getbootstrap.com/docs/4.5/examples/dashboard/dashboard.js"></script></body>
 </html>

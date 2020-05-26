@@ -40,16 +40,21 @@ Route::get('/help', function () {
 Route::get('/about', function () {
     return view('about');
 });
-Route::resource('web', 'WebController');
 
 // file upload route
-//Route::resource('upload', 'FileController');
 Route::get('/upload','FileController@index');
 //renaming /upload/fileupload -> uploadFile for convenience and passing request to controller to handle
 Route::post('/upload/file','FileController@fileUpload')->name('uploadFile');
 
+// post CRUD routes
+Route::resource('page', 'FileController');
 
 //Broken, not deleting just in case error pop out
+/*
+
+Route::resource('upload', 'FileController');
+Route::resource('web', 'WebController');
 Route::get('/upload2', function () {
     return view('upload');
 });
+*/

@@ -8,6 +8,7 @@
 @endsection
 
 @section('section_content')
+<div class="container">
     <p>TODO: Create drop down list like wiki    </p>
-
+</div>
 @endsection
