@@ -16,11 +16,23 @@ class WebController extends Controller
     // Controller resource methods
     public function create()
     {
-        # code...
+        return view('create');
     }
     public function store(Request $request)
     {
-        # code...
+        $this->validate($request, [
+            'title' => 'required',
+            'description' => 'required'
+        ]);
+        
+        $post = new Post;
+        $post->title = $request->input('title');
+        $post->body = $request->input('description');
+        //change this to Auth user
+        $post->creator = 'Krishna Aji';
+        $post->save();
+
+        return redirect('/browse')->with('success', 'Page Created');
     }
     public function show($id)
     {

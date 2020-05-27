@@ -46,6 +46,7 @@ Route::post('/upload/file','FileController@fileUpload')->name('uploadFile');
 
 // post CRUD routes
 Route::resource('page', 'WebController');
+Route::get('/create', 'WebController@create');
 
 //Broken, not deleting just in case error pop out
 /*
