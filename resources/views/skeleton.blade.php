@@ -11,8 +11,6 @@
     <!-- Styles -->
     <style>
         html, body {
-            background-color: #1A1B18;
-            color: #e8e6e3;
             font-family: 'Nunito', sans-serif;
             font-weight: 200;
             height: 100vh;

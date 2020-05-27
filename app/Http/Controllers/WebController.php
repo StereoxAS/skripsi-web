@@ -3,29 +3,41 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Post;
 
 class WebController extends Controller
 {
     public function index() {
-        echo 'index';
+        //$posts =  Post::orderBy('created_at', 'desc')->get();
+        //return selected number of posts
+        $posts =  Post::orderBy('created_at', 'desc')->paginate(2);
+        return view('browse')->with('posts', $posts);
     }
-    public function create() {
-       echo 'create';
+    // Controller resource methods
+    public function create()
+    {
+        # code...
     }
-    public function store(Request $request) {
-       echo 'store';
+    public function store(Request $request)
+    {
+        # code...
     }
-    public function show($id) {
-       echo 'show';
+    public function show($id)
+    {
+        $post = Post::find($id);
+        return view('page')->with('post', $post);
     }
-    public function edit($id) {
-       echo 'edit';
+    public function edit($id)
+    {
+        # code...
     }
-    public function update(Request $request, $id) {
-       echo 'update';
+    public function update(Request $request, $id)
+    {
+        # code...
     }
-    public function destroy($id) {
-       echo 'destroy';
+    public function destroy($id)
+    {
+        # code...
     }
     //--------------------------------------------------------------------------------
     /**

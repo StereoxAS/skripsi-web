@@ -31,9 +31,7 @@ Route::get('/', function () {
 Route::get('/search', function () {
     return view('search');
 });
-Route::get('/browse', function () {
-    return view('browse');
-});
+Route::get('/browse', 'WebController@index');
 Route::get('/help', function () {
     return view('help');
 });
@@ -47,7 +45,7 @@ Route::get('/upload','FileController@index');
 Route::post('/upload/file','FileController@fileUpload')->name('uploadFile');
 
 // post CRUD routes
-Route::resource('page', 'FileController');
+Route::resource('page', 'WebController');
 
 //Broken, not deleting just in case error pop out
 /*

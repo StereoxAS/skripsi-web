@@ -42,29 +42,4 @@ class FileController extends Controller
             echo "If statement is not satisfied";
         }
     }
-    // Controller resource methods
-    public function create()
-    {
-        # code...
-    }
-    public function store(Request $request)
-    {
-        # code...
-    }
-    public function show($id)
-    {
-        # code...
-    }
-    public function edit($id)
-    {
-        # code...
-    }
-    public function update(Request $request, $id)
-    {
-        # code...
-    }
-    public function destroy($id)
-    {
-        # code...
-    }
 }
