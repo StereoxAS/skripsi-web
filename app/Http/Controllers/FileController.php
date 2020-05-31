@@ -11,16 +11,21 @@ class FileController extends Controller
     //--------------------------------------------------------------------------------
     // File upload controller
     // 
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
     public function index()
     {
         return view('upload.index');
     }
     public function fileUpload(Request $request)
     {
-        //file is saved on public/files
+        //file is saved on public/files/
         $uploadPath = 'files/';
         $usableExtension = array("csv", "txt", "doc", "docx", "jpg", "jpeg", "png", "pdf");
-
+        
+        //Handler
         if ($request->hasFile('file'))
         {            
             if (!file_exists($uploadPath)) 
@@ -35,6 +40,7 @@ class FileController extends Controller
                 //rename file.extension to proper filename with slugs (filename-date-extension)
                 $fileName = str_slug(Carbon::now()->toDayDateTimeString()).rand(1, 9999) . '.' . $fileExtension;
                 $request->file('file')->move($uploadPath, $fileName);
+                //TODO: redirect this to Edit and proceed to STORE into database
             }
         }
         else

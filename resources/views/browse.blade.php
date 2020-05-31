@@ -38,10 +38,17 @@
         
     <li class="list-group-item">
         <div class="media">
-                <img src="{{url('/icons/64px/file.svg')}}" class="mr-3" alt="Icon">
+                <!-- Icon for Pages -->
+                @if ($post->picture != 'noImage.png')
+                    <!--<img src="{{url('/files/'.$post->picture)}}" class="mr-3" alt="Icon">-->
+                    <img src="{{url('/icons/64px/file.svg')}}" class="mr-3" alt="Icon">
+                @else
+                    <img src="{{url('/icons/64px/book.svg')}}" class="mr-3" alt="Icon">
+                @endif
+                
                 <div class="media-body">
                     <h5 class="mt-0"><a class="text-decoration-none text-dark" href="/page/{{$post->id}}">{{$post->title}}</a></h5>
-                    {{$post->body}}
+                    <p>{!!$post->body!!}</p>
                     <p></p>
                     
                     <small>Created by {{$post->creator}} at {{$post->created_at}}</small>

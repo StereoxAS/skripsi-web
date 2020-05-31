@@ -11,29 +11,43 @@
         <div class="flex-center position-ref full-height">
             @if (Route::has('login'))
                 <div class="top-right links">
+                        <a href="/browse">Browse</a>
                     @auth
+                        <!-- 
                         <a href="{{ url('/home') }}">Home</a>
+                        -->
+                        <a class="dropdown-item" href="{{ route('logout') }}"
+                          onclick="event.preventDefault();
+                          document.getElementById('logout-form').submit();">
+                        {{ __('Logout') }}
+                        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                            @csrf
+                        </form>
+        </a>
                     @else
                         <a href="{{ route('login') }}">Login</a>
 
                         @if (Route::has('register'))
-                            <a href="{{ route('register') }}">Register</a>
+                            <a href="{{ route('register') }}" method="POST">Register</a>
                         @endif
                     @endauth
                 </div>
+                <div class="content">
+                    <div class="title m-b-md">
+                        Knowledge Base
+                    </div>
+                    @if (Route::has('login'))
+                        @auth
+                            <div class="links">
+                                <a href="/upload"   >Upload</a>
+                                <a href="/browse"   >Browse</a>
+                                <a href="/about"    >About</a>
+                            </div>
+                        @endauth
+                    @endif
+                </div>
             @endif
 
-            <div class="content">
-                <div class="title m-b-md">
-                    Laravel
-                </div>
-
-                <div class="links">
-                    <a href="/upload"   >Upload</a>
-                    <a href="/browse"   >Browse</a>
-                    <a href="/about"    >About</a>
-                </div>
-            </div>
         </div>
     </body>
     <div class="content">

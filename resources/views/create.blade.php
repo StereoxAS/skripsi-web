@@ -7,7 +7,7 @@
 @endsection
 
 @section('section_content')
-    {!! Form::open(['action' => 'WebController@store', 'method' => 'POST']) !!}
+    {!! Form::open(['action' => 'WebController@store', 'method' => 'POST', 'enctype' => 'multipart/form-data']) !!}
     <div class="form-group">
         {!! Form::label('title', 'Title') !!}    
         {!! Form::text('title', '', ['class' => 'form-control', 'placeholder' => 'Title']) !!}

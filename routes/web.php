@@ -27,11 +27,12 @@ use Illuminate\Support\Facades\Route;
 */
 Route::get('/', function () {
     return view('welcome', ['devName'=>'Krishna Aji']);
-})->name('home');
+})->name('landing');
+
 Route::get('/search', function () {
     return view('search');
-});
-Route::get('/browse', 'WebController@index');
+})->name('search');;
+Route::get('/browse', 'WebController@index')->name('browse');
 Route::get('/help', function () {
     return view('help');
 });
@@ -57,3 +58,6 @@ Route::get('/upload2', function () {
     return view('upload');
 });
 */
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
