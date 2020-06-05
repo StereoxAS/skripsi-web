@@ -27,16 +27,30 @@ class WebController extends Controller
     {
         $this->validate($request, [
             'title' => 'required',
-            'description' => 'required'
+            'short_desc' => 'required'
         ]);
         // TODO: Add validation for
         /*
             'pictures' => 'image|nullable|max:1999'
         */
         $post = new Post;
+
+        //PDF Parse
+        if ($request->hasFile('file_upload')) {
+            $parser = new \Smalot\PdfParser\Parser();
+            $pdf    = $parser->parseFile($request->file('file_upload'));
+            $text   = $pdf->getText();
+            $post->body = $text;
+
+            //saving file
+            $fileName = pathinfo($request->file('file_upload')->getClientOriginalName(), PATHINFO_FILENAME);
+            $extension = $request->file('file_upload')->getClientOriginalExtension();
+            $fileSave = $fileName . '_' . time() . '.' . $extension;
+            $path = $request->file('file_upload')->storeAs('public/files/', $fileSave);
+            $post->file = $fileSave;
+        }
         $post->title = $request->input('title');
-        $post->body = $request->input('description');
-        //change this to Auth user
+        $post->short_desc = $request->input('short_desc');
         $post->user_id = auth()->user()->id;
         $post->creator = auth()->user()->name;
         $post->save();
@@ -64,13 +78,15 @@ class WebController extends Controller
         //Redirect from Edit
         $this->validate($request, [
             'title' => 'required',
+            'short_desc' => 'required',
             'description' => 'required'
         ]);
         
         $post = Post::find($id);
+        
         $post->title = $request->input('title');
         $post->body = $request->input('description');
-        //change this to Auth user
+        $post->short_desc = $request->input('short_desc');
         $post->user_id = auth()->user()->id;
         $post->creator = auth()->user()->name;
         $post->save();

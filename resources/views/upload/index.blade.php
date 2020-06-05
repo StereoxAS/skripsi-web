@@ -28,7 +28,8 @@
     var dropZone = new Dropzone(".dropzone",
     { 
         maxFilesize: 8,  // max 8mb, also set max_filesize in php.ini
-        acceptedFiles: ".csv, .txt, .doc, .docx, .jpg, .jpeg, .png, .pdf",
+        //acceptedFiles: ".csv, .txt, .doc, .docx, .jpg, .jpeg, .png, .pdf",
+        acceptedFiles: ".pdf",
     });
     /* Cek on file added
     dropZone.on("addedfile", function () {

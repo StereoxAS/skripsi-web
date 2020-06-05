@@ -20,7 +20,7 @@
     <!-- Short Desc -->
     <div>
         @if ($post->exists())
-            <p>{!!$post->body!!}</p>
+            <p>{!!$post->short_desc!!}</p>
         @else
         <p>Dekripsi tidak ada.</p>
         @endif
@@ -57,18 +57,22 @@
     </div>
 
     <!-- Table -->
-    
-    <div id="table" data-target="table">
-        <h4>Tabel</h4>
-        <hr>
-    </div>
+    @if ($post->table != 'Tables')
+        <div id="table" data-target="table">
+            <h4>Tabel</h4>
+            <p>{!! $post->table !!}</p>
+        </div>
+    @endif
 
     <!-- Reference -->
-
-    <div id="reference" data-target="reference">
-        <h4>Referensi</h4>
-        <hr>
-    </div>
+    @if ($post->file != 'templateFile.pdf')
+        <div id="reference" data-target="reference">
+            <h4>Referensi</h4>
+            <ul>
+            <li><a href="/download/{{$post->file}}">{!! $post->file !!}</a></li>
+            </ul>
+        </div>
+    @endif
     <!-- TODO: Create delete button only for creator of that page [DONE] :: Auth user use database relation declared in HomeController@index -->
         <!-- Old Method -->
         @auth

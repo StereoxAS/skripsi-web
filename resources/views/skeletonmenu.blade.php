@@ -100,23 +100,25 @@
         <ul class="nav flex-column">
           <li class="nav-item">
             <input type="search" class="form-control ds-input" id="search-input" placeholder="Search..." aria-label="Search for..." autocomplete="off" data-docs-version="4.5" spellcheck="false" role="combobox" aria-autocomplete="list" aria-expanded="false" aria-owns="algolia-autocomplete-listbox-0" dir="auto" style="position: relative; vertical-align: top;">
+            <div id="search-item"></div>
+            {{ csrf_field() }}
           </li>
           <li class="nav-item">
             <a class="nav-link" href="/browse">
               <span data-feather="folder"></span>
-              Browse <span class="sr-only">(current)</span>
+              Browse
             </a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="/upload">
               <span data-feather="upload"></span>
-              Upload
+              Upload File
             </a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="/create">
               <span data-feather="plus-circle"></span>
-              Create
+              Create Page
             </a>
           </li>
         </ul>
@@ -192,6 +194,27 @@
       });
     }
   </script>
+
+  <script>
+    // Search Function [Not working]
+    $(document).ready(function () {
+      $('#search-input').keyup(function () {
+        var query = $(this).val();
+        if (query != '') {
+            var _token = $('input[name="_token"]').val();
+            $.ajax({
+              url:"{{ route('fetch') }}",
+              method: "POST",
+              data: {query:query, _token:_token},
+              success: function (data) {
+                $('#search-input').fadeIn();
+                $('#search-input').html(data);
+              }
+            });
+        }
+      })
+    })
+  </script>
 </div>
 
   <!-- CDN Load -->
@@ -199,7 +222,9 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
   <script>window.jQuery || document.write('<script src="/docs/4.5/assets/js/vendor/jquery.slim.min.js"><\/script>')</script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/feather-icons/4.9.0/feather.min.js"></script>
+  <!-- Old 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.min.js"></script>
   <script src="https://getbootstrap.com/docs/4.5/examples/dashboard/dashboard.js"></script>
+  -->
 </body>
 </html>

@@ -42,11 +42,14 @@ Route::get('/about', function () {
 
 // file upload route
 Route::get('/upload','FileController@index');
+//Route::get('/download', 'FileController@show');
 //renaming /upload/fileupload -> uploadFile for convenience and passing request to controller to handle
 Route::post('/upload/file','FileController@fileUpload')->name('uploadFile');
+Route::post('/browse', 'FileController@fetch')->name('fetch');
 
 // post CRUD routes
 Route::resource('page', 'WebController');
+Route::resource('download', 'FileController');
 Route::get('/create', 'WebController@create');
 
 //Broken, not deleting just in case error pop out
