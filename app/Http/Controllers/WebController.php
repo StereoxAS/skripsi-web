@@ -25,6 +25,7 @@ class WebController extends Controller
     }
     public function store(Request $request)
     {
+        $message = "Page Created";
         $this->validate($request, [
             'title' => 'required',
             'short_desc' => 'required'
@@ -39,8 +40,20 @@ class WebController extends Controller
         if ($request->hasFile('file_upload')) {
             $parser = new \Smalot\PdfParser\Parser();
             $pdf    = $parser->parseFile($request->file('file_upload'));
-            $text   = $pdf->getText();
-            $post->body = $text;
+
+            $text   = str_replace("\n", "<br />", $pdf->getText()); // full unformatted text
+            $text   = trim($text); // trim all tabs
+            //$text   = preg_replace('!\d+!', '<sup>$0</sup>', $text); // turns ALL decimals to subscript
+            /*
+
+            */
+
+            try {
+                $post->body = $text;
+            } catch (\Illuminate\Database\QueryException $ex) {
+                $message = "Error saving text file";
+                $post->body = "Text is too long to display";
+            }
 
             //saving file
             $fileName = pathinfo($request->file('file_upload')->getClientOriginalName(), PATHINFO_FILENAME);
@@ -55,7 +68,7 @@ class WebController extends Controller
         $post->creator = auth()->user()->name;
         $post->save();
 
-        return redirect('/browse')->with('success', 'Page Created');
+        return redirect('/browse')->with('success', $message);
     }
     public function show($id)
     {

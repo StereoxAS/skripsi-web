@@ -14,7 +14,7 @@
     </div>
     <div class="form-group">
         {!! Form::label('short_desc', 'Short Desc') !!}    
-        {!! Form::textarea('short_desc', '', ['id' => 'short_desc','class' => 'form-control', 'placeholder' => 'Short description']) !!}
+        {!! Form::textarea('short_desc', '', ['id' => 'short_desc','class' => 'form-control', 'placeholder' => 'Short description', 'maxlength' => '191']) !!}
     </div>
     <!--
     @if ($parsedFile ?? '' != '')

@@ -4,7 +4,7 @@
     
 @section('section_menu_title')
     @parent
-    <h1 class="h2">{{$post->title}}</h1>
+    <h1 class="h2" style="width: 50rem;">{{$post->title}}</h1>
 @endsection
 
 @section('section_header_menu')
@@ -18,7 +18,7 @@
 <div class="col">
     
     <!-- Short Desc -->
-    <div>
+    <div class="text-break">
         @if ($post->exists())
             <p>{!!$post->short_desc!!}</p>
         @else
@@ -36,8 +36,12 @@
                 <div class="collapse show" id="collapseOne">
                     <ol>
                         <li><a href="#description">Deskripsi</a></li>
-                        <li><a href="#table">Tabel</a></li>
-                        <li><a href="#reference">Referensi</a></li>
+                        @if ($post->table != 'Tables')
+                            <li><a href="#table">Tabel</a></li>
+                        @endif
+                        @if ($post->table != 'References')
+                            <li><a href="#reference">Referensi</a></li>
+                        @endif
                     </ol>
                 </div>
             </div>
@@ -46,13 +50,13 @@
 
     <!-- Long Desc -->
 
-    <div id="description" data-target="description">
-        <h4>Deskripsi</h4>
+    <div id="description" data-target="description" class="text-break">
+        <h4>Content</h4>
         <hr>
         @if ($post->exists())
-            <p>{!! $post->body !!}</p>
+            <p class="text-left">{!! $post->body !!}</p>
         @else
-        <p>Dekripsi tidak ada.</p>
+        <p>Konten tidak ada.</p>
         @endif
     </div>
 

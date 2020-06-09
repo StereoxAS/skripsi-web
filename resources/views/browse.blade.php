@@ -48,7 +48,7 @@
                 
                 <div class="media-body">
                     <h5 class="mt-0"><a class="text-decoration-none text-dark" href="/page/{{$post->id}}">{{$post->title}}</a></h5>
-                    <p>{!!$post->body!!}</p>
+                    <p>{!!$post->short_desc!!}</p>
                     <p></p>
                     
                     <small>Created by {{$post->creator}} at {{$post->created_at}}</small>

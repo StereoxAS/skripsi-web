@@ -31,7 +31,10 @@
                         Pilih file PDF yang ingin diunggah, file tersebut akan otomatis dibaca dan dijadikan isi utama artikel tersebut
                     </li>
                     <li>
-                        Pilih "Submit"
+                        Sunting seperlunya agar teks mudah dibaca
+                    </li>
+                    <li>
+                        Klik tombol "Submit"
                     </li>
                 </ul>
             </div>

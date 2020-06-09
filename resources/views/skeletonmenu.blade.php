@@ -155,10 +155,12 @@
       <!-- Header Menu Section-->
       <div class="btn-toolbar mb-2 mb-md-0">
         <div class="btn-group mr-2">
-          <button type="button" class="btn btn-sm btn-outline-secondary">Share</button>
-          <button type="button" class="btn btn-sm btn-outline-secondary">Export</button>
+          <!-- Add a to add button. Section header menu includes page specific header button
+            <a class="btn btn-sm btn-outline-secondary" href="/page" role="button">Edit Page</a>
+          -->
+          @section('section_header_menu')
+          @show
         </div>
-        @section('section_header_menu')
             
         @show
       </div>
