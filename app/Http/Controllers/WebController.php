@@ -78,7 +78,7 @@ class WebController extends Controller
     public function edit($id)
     {
         $post = Post::find($id);
-        // Editing only for creator function [DONE]
+        // Editing permission only for creator function [DONE]
          /*
             if (auth()->user()->id != $post->user_id) {
                 return redirect('/page/'. $id)->with('post', $post)->with('error', 'You cannot edit pages you did not create');
