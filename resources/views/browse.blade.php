@@ -46,7 +46,7 @@
                     <img src="{{url('/icons/64px/book.svg')}}" class="mr-3" alt="Icon">
                 @endif
                 
-                <div class="media-body">
+                <div class="media-body text-truncate">
                     <h5 class="mt-0"><a class="text-decoration-none text-dark" href="/page/{{$post->id}}">{{$post->title}}</a></h5>
                     <p>{!!$post->short_desc!!}</p>
                     <p></p>

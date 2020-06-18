@@ -52,20 +52,24 @@
   -->
   <!-- New Navbar-->
   <nav class="navbar navbar-expand-md navbar-dark bg-dark">
-
     <div class="collapse navbar-collapse" id="navbarsExampleDefault">
       <ul class="navbar-nav mr-auto">
-
+        <a href="/">
+          <img src="/images/logo_b.png" alt="" height="32" width="180">
+        </a>
       </ul>
       <ul class="navbar-nav ml-auto">
           <!-- Authentication Links -->
+              <li class="nav-item">
+                <a class="nav-link" href="/">{{ __('Halaman Utama') }}</a>
+            </li>
           @guest
               <li class="nav-item">
-                  <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
+                  <a class="nav-link" href="{{ route('login') }}">{{ __('Masuk') }}</a>
               </li>
               @if (Route::has('register'))
                   <li class="nav-item">
-                      <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
+                      <a class="nav-link" href="{{ route('register') }}">{{ __('Daftar') }}</a>
                   </li>
               @endif
           @else
@@ -75,15 +79,17 @@
                   </a>
 
                   <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                      <a class="dropdown-item" href="{{ route('logout') }}"
-                          onclick="event.preventDefault();
-                                        document.getElementById('logout-form').submit();">
-                          {{ __('Logout') }}
-                      </a>
+                    
+                    <a class="dropdown-item" href="">Profil</a>
+                    <a class="dropdown-item" href="{{ route('logout') }}"
+                        onclick="event.preventDefault();
+                                      document.getElementById('logout-form').submit();">
+                        {{ __('Keluar') }}
+                    </a>
 
-                      <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                          @csrf
-                      </form>
+                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                        @csrf
+                    </form>
                   </div>
               </li>
           @endguest
@@ -95,9 +101,11 @@
 
 <div class="container-fluid"> 
   <!-- Sidebar -->
-    <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse">
+    <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block sidebar collapse">
       <div class="sidebar-sticky">
         <ul class="nav flex-column">
+          <li class="nav-item">
+          </li>
           <li class="nav-item">
             <input type="search" class="form-control ds-input" id="search-input" placeholder="Search..." aria-label="Search for..." autocomplete="off" data-docs-version="4.5" spellcheck="false" role="combobox" aria-autocomplete="list" aria-expanded="false" aria-owns="algolia-autocomplete-listbox-0" dir="auto" style="position: relative; vertical-align: top;">
             <div id="search-item"></div>
@@ -106,25 +114,25 @@
           <li class="nav-item">
             <a class="nav-link" href="/browse">
               <span data-feather="folder"></span>
-              Browse
+              Beranda
             </a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="/upload">
               <span data-feather="upload"></span>
-              Upload File
+              Unggah Dokumen
             </a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="/create">
               <span data-feather="plus-circle"></span>
-              Create Page
+              Buat Halaman
             </a>
           </li>
         </ul>
 
         <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
-          <span>About this site</span>
+          <span>Tentang Situs</span>
           <!-- <a class="d-flex align-items-center text-muted" href="#" aria-label="Add a new report">
             <span data-feather="plus-circle"></span> -->
           </a>
@@ -133,13 +141,13 @@
           <li class="nav-item">
             <a class="nav-link" href="/help">
               <span data-feather="help-circle"></span>
-              Help
+              Bantuan
             </a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="/about">
               <span data-feather="info"></span>
-              About
+              Tentang
             </a>
           </li>
         </ul>

@@ -11,10 +11,10 @@
     <div class="row">
         <div class="col-4">
             <div class="list-group" id="list-tab" role="tablist">
-            <a class="list-group-item list-group-item-action active" id="list-home-list" data-toggle="list" href="#list-home" role="tab" aria-controls="home">Creating Page</a>
-            <a class="list-group-item list-group-item-action" id="list-profile-list" data-toggle="list" href="#list-profile" role="tab" aria-controls="profile">Managing Page</a>
-            <a class="list-group-item list-group-item-action" id="list-messages-list" data-toggle="list" href="#list-messages" role="tab" aria-controls="messages">Automatic Uploading</a>
-            <a class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list" href="#list-settings" role="tab" aria-controls="settings">Settings</a>
+            <a class="list-group-item list-group-item-action active" id="list-home-list" data-toggle="list" href="#list-home" role="tab" aria-controls="home">Membuat Halaman Baru</a>
+            <a class="list-group-item list-group-item-action" id="list-profile-list" data-toggle="list" href="#list-profile" role="tab" aria-controls="profile">Menyunting Halaman</a>
+            <a class="list-group-item list-group-item-action" id="list-messages-list" data-toggle="list" href="#list-messages" role="tab" aria-controls="messages">Parsing Otomatis</a>
+            <a class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list" href="#list-settings" role="tab" aria-controls="settings">Pengaturan</a>
             </div>
         </div>
         <div class="col-8">
@@ -22,7 +22,7 @@
             <div class="tab-pane fade show active" id="list-home" role="tabpanel" aria-labelledby="list-home-list">
                 <ul>
                     <li>
-                        Pilih "Create Page"
+                        Pilih "Buat Halaman"
                     </li>
                     <li>
                         Isikan Judul dan deskripsi singkat berisikan keterangan dari artikel dibuat
@@ -41,7 +41,7 @@
             <div class="tab-pane fade" id="list-profile" role="tabpanel" aria-labelledby="list-profile-list">
                 <ul>
                     <li>
-                        Halaman yang sudah ada dapat anda sunting dengan membuka halaman tersebut dari menu "Browse" dan pilih opsi "Edit". 
+                        Halaman yang sudah ada dapat anda sunting dengan membuka halaman tersebut dari menu "Beranda" dan pilih opsi "Edit". 
                         Pastikan hanya menyunting dengan tujuan membenarkan atau melengkapi, bukan untuk merusak halaman tersebut.
                     </li>
                     <li>

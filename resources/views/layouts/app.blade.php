@@ -21,11 +21,9 @@
 </head>
 <body>
     <div id="app">
-        <nav>
-            <div class="navbar-collapse">
-                <a class="navbar-brand col-md-3 col-lg-2 mr-0 px-3 text-dark" href="/">Home</a>
-            </div>
-        </nav>
+        <nav class="navbar navbar-dark bg-dark">
+            <a class="navbar-brand" href="/">Halaman Utama</a>
+          </nav>
         <!-- Navbar 
         <nav class="navbar navbar-expand-md navbar-dark bg-dark">
             <div class="collapse navbar-collapse" id="navbarsExampleDefault">

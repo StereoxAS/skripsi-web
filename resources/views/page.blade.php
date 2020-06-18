@@ -35,12 +35,12 @@
                 </div>
                 <div class="collapse show" id="collapseOne">
                     <ol>
-                        <li><a href="#description">Deskripsi</a></li>
+                        <li><a href="#description">Konten</a></li>
                         @if ($post->table != 'Tables')
                             <li><a href="#table">Tabel</a></li>
                         @endif
-                        @if ($post->table != 'References')
-                            <li><a href="#reference">Referensi</a></li>
+                        @if ($post->file != 'templateFile.pdf')
+                            <li><a href="#reference">Dokumen Tersedia</a></li>
                         @endif
                     </ol>
                 </div>
@@ -51,7 +51,7 @@
     <!-- Long Desc -->
 
     <div id="description" data-target="description" class="text-break">
-        <h4>Content</h4>
+        <h4>Konten</h4>
         <hr>
         @if ($post->exists())
             <p class="text-left">{!! $post->body !!}</p>
@@ -71,7 +71,7 @@
     <!-- Reference -->
     @if ($post->file != 'templateFile.pdf')
         <div id="reference" data-target="reference">
-            <h4>Referensi</h4>
+            <h4>Dokumen Tersedia</h4>
             <ul>
             <li><a href="/download/{{$post->file}}">{!! $post->file !!}</a></li>
             </ul>

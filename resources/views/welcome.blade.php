@@ -11,7 +11,7 @@
         <div class="flex-center position-ref full-height">
             @if (Route::has('login'))
                 <div class="top-right links">
-                        <a href="/browse">Browse</a>
+                        <a href="/browse">Beranda</a>
                     @auth
                         <!-- 
                         <a href="{{ url('/home') }}">Home</a>
@@ -23,25 +23,28 @@
                         <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                             @csrf
                         </form>
-        </a>
+                        </a>
                     @else
-                        <a href="{{ route('login') }}">Login</a>
+                        <a href="{{ route('login') }}">Masuk</a>
 
                         @if (Route::has('register'))
-                            <a href="{{ route('register') }}" method="POST">Register</a>
+                            <a href="{{ route('register') }}" method="POST">Daftar</a>
                         @endif
                     @endauth
                 </div>
                 <div class="content">
+                    <div class="title m-b-md">
+                        <img class="mb-4" src="/images/logo.png" alt="" width="180" height="180">
+                    </div>
                     <div class="title m-b-md">
                         Knowledge Base
                     </div>
                     @if (Route::has('login'))
                         @auth
                             <div class="links">
-                                <a href="/upload"   >Upload</a>
-                                <a href="/browse"   >Browse</a>
-                                <a href="/about"    >About</a>
+                                <a href="/upload"   >Unggah Dokumen</a>
+                                <a href="/browse"   >Beranda</a>
+                                <a href="/about"    >Tentang Situs</a>
                             </div>
                         @endauth
                     @endif
