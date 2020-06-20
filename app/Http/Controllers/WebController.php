@@ -97,6 +97,13 @@ class WebController extends Controller
         
         $post = Post::find($id);
         
+        $posts = Post::all();
+        foreach ($posts as $post) {
+            if ($post->user_id == $user->id) {
+                $post->creator = $user->name
+            }
+        }
+        
         $post->title = $request->input('title');
         $post->body = $request->input('description');
         $post->short_desc = $request->input('short_desc');
