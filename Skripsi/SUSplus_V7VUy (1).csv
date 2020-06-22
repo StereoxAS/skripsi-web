@@ -1,0 +1,18 @@
+#,Q1: I think that I would like to use this application frequently.,Q2: I found this application unnecessarily complex.,Q3: I thought this application was easy to use.,Q4: I think that I would need the support of a technical person to be able to use this application.,Q5: I found the various functions in this application were well integrated.,Q6: I thought there was too much inconsistency in this application.,Q7: I would imagine that most people would learn to use this application very quickly.,Q8: I found this application very cumbersome (awkward) to use.,Q9: I felt very confident using this application.,Q10: I needed to learn a lot of things before I could get going with this application.,SUS,Usability,Learnability
+1,3,4,5,4,5,2,2,2,1,4,50.0,56.3,25.0
+2,4,1,4,1,4,2,4,2,5,2,82.5,81.3,87.5
+3,3,1,4,1,3,3,5,2,4,1,77.5,71.9,100.0
+4,4,3,4,2,3,4,5,3,4,2,65.0,62.5,75.0
+5,3,3,5,2,4,2,5,3,4,2,72.5,71.9,75.0
+6,3,2,3,2,4,3,4,4,3,1,62.5,56.3,87.5
+7,4,3,4,2,5,1,3,1,5,1,82.5,81.3,87.5
+8,4,2,4,1,4,2,4,2,4,1,80.0,75.0,100.0
+9,3,2,4,1,4,2,4,2,5,2,77.5,75.0,87.5
+10,5,2,5,1,4,2,5,1,4,2,87.5,87.5,87.5
+11,4,4,3,2,3,2,4,3,5,1,67.5,62.5,87.5
+12,4,3,5,2,4,2,4,2,4,3,72.5,75.0,62.5
+14,SUS Score,73.1,Percentile,68,Grade,C-
+15,Learnability,80.2
+16,Usability,71.4
+17,Standard deviation,10.5
+18,Cronbach's alpha,0.644
