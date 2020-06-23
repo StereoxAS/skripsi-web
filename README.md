@@ -1,79 +1,86 @@
-<p align="center"><img src="https://res.cloudinary.com/dtfbvvkyp/image/upload/v1566331377/laravel-logolockup-cmyk-red.svg" width="400"></p>
+
+<p align="center"><img src="https://git.stis.ac.id/krishna.aji/laravel-stis-knowledge-base/-/blob/master/public/images/logo_b.png" width="400"></p>
 
 <p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/d/total.svg" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/v/stable.svg" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/license.svg" alt="License"></a>
+[![Framework Menggunakan Laravel](https://poser.pugx.org/laravel/laravel/v)](//packagist.org/packages/laravel/laravel)
+[![CSS Menggunakan Bootstrap](https://poser.pugx.org/twbs/bootstrap/v)](//packagist.org/packages/twbs/bootstrap)
 </p>
 
-## About Laravel
+## Tentang Situs
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+<div class="row align-items-center my-5">
+	<div class="col-lg-7">
+		<img class="img-fluid rounded mb-4 mb-lg-0" src="https://image.freepik.com/free-vector/group-students-watching-online-webinar_74855-5514.jpg" alt="">
+	</div>
+	<div class="col-lg-5">
+		<h1 class="font-weight-light">Politeknik Statistika Knowledge Base</h1>
+		<p>
+			Tidak lagi bingung untuk mencari siapakah yang punya soal tahun lalu
+		</p>
+		<p>
+			Tidak lagi bingung untuk membagikan dokumen yang kamu punya
+		</p>
+		<p>
+			Politeknik Statistika <span class="font-italic">Knowledge Base</span> hadir untuk memenuhi kebutuhan tersebut. Dari mahasiswa untuk mahasiswa.
+		</p>
+	<a class="btn btn-primary" href="www.krishnaaji.com">Mulai sekarang!</a>
+	</div>
+</div>	
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+<div class="card bg-light my-5 py-4 text-center">
+  <div class="card-body">
+		<blockquote class="blockquote mb-0">
+		  <p>"Knowledge is Power, Knowledge shared is Power multiplied."</p>
+		  <footer class="blockquote-footer"><cite title="Source Title">Dude trust me</cite></footer>
+		</blockquote>
+  </div>
+</div>
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+<div class="row">
+  <div class="col-md-4 mb-5">
+	<div class="card h-100">
+		
+	  <img class="card-img-top" src="/images/5293.jpg" alt="Card image cap">
+		
+	  <div class="card-body">
+		<h5 class="card-title font-italic">Berbagi</h5>
+		<p class="card-text">Unggah, akses, dan berbagi dokumen dari semua jenis perangkat ponsel, tablet, atau komputer!</p>
+	  </div>
+	</div>
+  </div>
+  <div class="col-md-4 mb-5">
+	<div class="card h-100">  
+	
+	  <img class="card-img-top" src="/images/32594.jpg" alt="Card image cap">
+	  
+	  <div class="card-body">
+		<h5 class="card-title font-italic">Community Driven</h5>
+		<p class="card-text">Ikut kembangkan konten situs ini bersama seluruh mahasiswa Politeknik Statistika STIS, setiap kontribusimu akan memudahkan pembelajaran mahasiswa lainnya</p>
+	  </div>
+	</div>
+  </div>
+  <div class="col-md-4 mb-5">
+	<div class="card h-100">  
+	
+	  <img class="card-img-top" src="/images/19283.jpg" alt="Card image cap">
+	  
+	  <div class="card-body">
+		<h5 class="card-title font-italic">Official Account</h5>
+		<p class="card-text">Daftarkan akunmu menjadi akun resmi untuk mendapatkan akses khusus untuk bisa memberikan rilis konten dengan tag spesial!</p>
+	  </div>
+	</div>
+  </div>
+</div>
 
-## Learning Laravel
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+## Documentation
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 1500 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+Dokumentasi mengenai aplikasi ini ada di [documentation](https://laravel.com/docs/contributions).
 
-## Laravel Sponsors
+## Bugs & Errors
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
-
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[British Software Development](https://www.britishsoftware.co)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- [UserInsights](https://userinsights.com)
-- [Fragrantica](https://www.fragrantica.com)
-- [SOFTonSOFA](https://softonsofa.com/)
-- [User10](https://user10.com)
-- [Soumettre.fr](https://soumettre.fr/)
-- [CodeBrisk](https://codebrisk.com)
-- [1Forge](https://1forge.com)
-- [TECPRESSO](https://tecpresso.co.jp/)
-- [Runtime Converter](http://runtimeconverter.com/)
-- [WebL'Agence](https://weblagence.com/)
-- [Invoice Ninja](https://www.invoiceninja.com)
-- [iMi digital](https://www.imi-digital.de/)
-- [Earthlink](https://www.earthlink.ro/)
-- [Steadfast Collective](https://steadfastcollective.com/)
-- [We Are The Robots Inc.](https://watr.mx/)
-- [Understand.io](https://www.understand.io/)
-- [Abdel Elrafa](https://abdelelrafa.com)
-- [Hyper Host](https://hyper.host)
-- [Appoly](https://www.appoly.co.uk)
-- [OP.GG](https://op.gg)
-- [云软科技](http://www.yunruan.ltd/)
-
-## Contributing
-
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+Jika ditemukan bug, error, atau vulnerability, harap hubungi penulis di e-mail [Krishna Aji](mailto:16.9227@stis.ac.id).
 
 ## License
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+This project and Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
