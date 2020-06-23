@@ -1,5 +1,5 @@
 
-<p align="center"><img src="https://raw.githubusercontent.com/StereoxAS/skripsi-web/master/public/images/logo_b.png" width="400"></p>
+<p align="center"><img src="https://cdn.discordapp.com/attachments/709797299596820530/724960540346286110/unknown.png" width="400"></p>
 
 <p align="center">
 -Framework Menggunakan Laravel <img src="https://poser.pugx.org/laravel/framework/d/total.svg" alt="Total Downloads">
