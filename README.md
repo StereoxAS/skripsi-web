@@ -1,5 +1,5 @@
 
-<p align="center"><img src="https://git.stis.ac.id/krishna.aji/laravel-stis-knowledge-base/-/raw/master/public/images/logo_b.png" width="400"></p>
+<p align="center"><img src="https://raw.githubusercontent.com/StereoxAS/skripsi-web/master/public/images/logo_b.png" width="400"></p>
 
 <p align="center">
 -Framework Menggunakan Laravel <img src="https://poser.pugx.org/laravel/framework/d/total.svg" alt="Total Downloads">
